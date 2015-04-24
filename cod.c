@@ -6,9 +6,20 @@ char in;
 void input(void);
 void run(char c);
 
-void main(void){
+
+int main (int argc, char *argv[]){
   x = 0;
-  input();
+  if(argc != 2){
+    input();
+  }else{
+    FILE *file = fopen(argv[1], "r");
+    char c;
+    while((x = fgetc(file)) != EOF){
+      run(c);
+    }
+    fclose(file);
+  }
+  return 0;
 }
 
 void input(void){
