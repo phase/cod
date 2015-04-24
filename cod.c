@@ -22,7 +22,9 @@ int main (int argc, char *argv[]){
 }
 
 void input(void){
-  printf(">> "); /* Bash-like input */
+  if(in != 10){
+    printf("\n>> "); /* Bash-like input */
+  }
   scanf("%c", &in); /* Get char input */
   run(in);
   input(); /* Loop */
@@ -36,13 +38,17 @@ void run(char c){
   switch(in){
     case 'i': case 'x':
       x++;
+	  break;
     case 'd':
       x--;
+	  break;
     case 'o': case 'c':
-      printf("%d\n", x);
+      printf("\n%c", x);
+	  break;
     case 's': case 'k':
       x = x*x;
+	  break;
     default:
-      printf("\n");
-  } 
+	  break;
+  }
 }
