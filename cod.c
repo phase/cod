@@ -15,8 +15,7 @@ void input(void){
   scanf("%c", &in); /* Get char input */
 
   /* Boundary checks */
-  if(x == 256) x = 0;
-  else if (x == -1) x = 0;
+  if(x == 256 || x == -1) x = 0;
   
   /* Operators */
   switch(in){
