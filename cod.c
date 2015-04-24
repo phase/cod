@@ -20,13 +20,13 @@ void input(void){
   
   /* Operators */
   switch(in){
-    case 'i':
+    case 'i': case 'x':
       x++;
     case 'd':
       x--;
-    case 'o':
+    case 'o': case 'c':
       printf("%d\n", x);
-    case 's':
+    case 's': case 'k':
       x = x*x;
     default:
       printf("\n");
