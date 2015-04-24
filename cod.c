@@ -11,7 +11,26 @@ void main(void){
 }
 
 void input(void){
-  printf(">> ");
-  scanf("%c", &in);
-  input();
+  printf(">> "); /* Bash-like input */
+  scanf("%c", &in); /* Get char input */
+
+  /* Boundary checks */
+  if(x >= 256) x = 0;
+  else if (x <= -1) x = 0;
+  
+  /* Operators */
+  switch(in){
+    case 'i':
+      x++;
+    case 'd':
+      x--;
+    case 'o':
+      printf("%d\n", x);
+    case 's':
+      x = x*x;
+    default:
+      printf("\n");
+  }
+
+  input(); /* Loop */
 }
