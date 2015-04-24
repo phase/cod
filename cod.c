@@ -4,6 +4,7 @@ unsigned int x;
 char in;
 
 void input(void);
+void run(char c);
 
 void main(void){
   x = 0;
@@ -13,8 +14,12 @@ void main(void){
 void input(void){
   printf(">> "); /* Bash-like input */
   scanf("%c", &in); /* Get char input */
+  run(in);
+  input(); /* Loop */
+}
 
-  /* Boundary checks */
+void run(char c){
+ /* Boundary checks */
   if(x == 256 || x == -1) x = 0;
   
   /* Operators */
@@ -29,7 +34,5 @@ void input(void){
       x = x*x;
     default:
       printf("\n");
-  }
-
-  input(); /* Loop */
+  } 
 }
