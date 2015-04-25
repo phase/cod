@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 unsigned int x;
 char in;
@@ -46,7 +47,25 @@ void run(char c){
       printf("%c", x);
 	  break;
     case 's': case 'k':
-      x = x*x;
+      x *= x;
+	  break;
+	case 'q':
+	  x = (int) sqrt(x);
+	  break;
+	case 'b':
+	  x = ~x;
+	  break;
+	case '&':
+	  x = (int) &x;
+	  break;
+	case 'r':
+	  x >>= 1;
+	  break;
+	case 'l':
+	  x <<= 1;
+	  break;
+	case 'n':
+	  printf("%d", x);
 	  break;
     default:
 	  break;
