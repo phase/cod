@@ -43,7 +43,7 @@ void run(char c){
       x--;
 	  break;
     case 'o': case 'c':
-      printf("\n%c", x);
+      printf("%c", x);
 	  break;
     case 's': case 'k':
       x = x*x;
