@@ -75,10 +75,9 @@ void run(char c){
 	case '5':
 	  {
 	    unsigned int temp = x;
-	    while(x --> 0){
-	      printf("%c\n", x);
+	    while(temp --> 0){
+	      printf("%c\n", temp);
 	    }
-	    x = temp;
 	    break;
 	  }
 	case 'n':
