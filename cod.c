@@ -78,8 +78,16 @@ void run(char c){
 	    while(temp --> 0){
 	      printf("%c\n", temp);
 	    }
-	    break;
 	  }
+	  break;
+	case '6':
+	  {
+	    unsigned int temp = x;
+		while(temp ++> (x=x*x)){
+		  printf("%c\n", temp);
+		}
+	  }
+	  break;
 	case 'n':
 	  printf("%d", x);
 	  break;
