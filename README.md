@@ -8,6 +8,7 @@ Deadfish Commands:
 * `d` - Decrement value by 1
 * `s` - Square value
 * `o` - Output ASCII value
+
 cod Commands:
 * `b` - Binary Two's Complement the value
 * `q` - Square root the value
