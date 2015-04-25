@@ -58,12 +58,29 @@ void run(char c){
 	case '&':
 	  x = (int) &x;
 	  break;
+	case 'e':
+	  x = 0;
+	  break;
 	case 'r':
 	  x >>= 1;
 	  break;
 	case 'l':
 	  x <<= 1;
 	  break;
+	case '4':
+	  while(x --> 0){
+	    printf("%c\n", x);
+	  }
+	  break;
+	case '5':
+	  {
+	    unsigned int temp = x;
+	    while(x --> 0){
+	      printf("%c\n", x);
+	    }
+	    x = temp;
+	    break;
+	  }
 	case 'n':
 	  printf("%d", x);
 	  break;
